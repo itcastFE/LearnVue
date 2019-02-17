@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <father></father>
+    </div>
+    <script>
+      Vue.component('father', {
+        template: `
+                        <div>
+                          <p>父亲年纪大了，记性不好，我儿子告诉我他叫{{mySonName}}</p>
+                          <son @tellFatherMyname="getMySonName"></son>
+                        </div>
+        `,
+        data () {
+          return {
+            mySonName: '????'
+          }
+        },
+        methods: {
+          // 这个函数中有一个默认参数，该参数就表示上传上来的值
+          getMySonName (data) {
+            // console.log(data);
+            this.mySonName = data
+          }
+        },
+        components: {
+          son: {
+            data () {
+              return {
+                myName: '小明'
+              }
+            },
+            template: '<button @click="emitMyname">点击就告诉我爸爸我叫{{myName}}</button>',
+            methods: {
+              emitMyname () {
+                // 子组件传值给父组件需要用到$emit()方法，这个方法可以传递两个参数，一个是事件名称，一个是需要传递的数据
+                this.$emit('tellFatherMyname', this.myName)
+              }
+            }
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

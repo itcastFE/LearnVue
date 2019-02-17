@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+    <link rel="stylesheet" href="./animate.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- 
+        enter-active-class 定义进入动画的状态
+        leave-active-class 定义离开动画的状态
+       -->
+      <transition
+        enter-active-class="animated zoomIn"
+        leave-active-class="animated hinge"
+      >
+          <div v-if="isShow">itcast</div>
+      </transition>
+      <button @click="isShow=!isShow">点击</button>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          isShow: true
+        }
+      })
+    </script>
+  </body>
+</html>

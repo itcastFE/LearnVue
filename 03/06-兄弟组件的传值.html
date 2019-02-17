@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <father></father>
+    </div>
+    <script>
+      // 创建一个空的vue实例，作为事件总线
+      var eventbus = new Vue()
+
+      Vue.component('father', {
+        template:`
+                    <div>
+                      <son></son>
+                      <daughter></daughter>
+                    </div>
+        `,
+        components: {
+          son: {
+            data () {
+              return {
+                mySisterName: '???'
+              }
+            },
+            template: '<span>我妹妹告诉我她叫{{mySisterName}}</span>',
+            mounted () {
+              // 通过eventbus的$on()方法去监听兄弟节点发射过来的事件
+              // $on有两个参数，一个是事件名称，一个是函数，该函数的默认值就是传递过来的数据
+              eventbus.$on('tellBroMyName', data => {
+                this.mySisterName = data
+              })
+            }
+          },
+          daughter: {
+            data () {
+              return {
+                myName: '兰兰'
+              }
+            },
+            template: '<button @click="emitMyName">点击就告诉哥哥我叫{{myName}}</button>',
+            methods: {
+              emitMyName() {
+                // 通过事件总线发射一个事件名称和需要传递的数据
+                eventbus.$emit('tellBroMyName', this.myName)
+              }
+            }
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

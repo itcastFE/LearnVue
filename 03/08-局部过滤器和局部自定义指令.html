@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <one></one>
+      <two></two>
+    </div>
+    <script>
+      // 全局自定义指令可以在任何组件中使用
+        Vue.directive('mycolor', {
+          inserted(el, binding) {
+            console.log(binding);
+            // binding.value可以获取传入自定义指令中的属性的值
+            el.style.color = binding.value
+          }
+        })
+      // 不管是局部自定义指令还是局部过滤器都只能在当前组件内使用，脱离当前组件无效
+      // 局部过滤器通过在组件内部使用filters属性创建
+      Vue.component('one', {
+        data () {
+          return {
+            time: new Date(),
+            color: 'red'
+          }
+        },
+        template: `
+                      <div>
+                        <p>{{time | fmtTime}}</p>
+                        <input type="text" v-mycolor="color">
+                      </div>
+        `,
+        filters: {
+          fmtTime(time) {
+            console.log(time);
+            var y = time.getFullYear();
+            var m = time.getMonth() + 1;
+            var d = time.getDate();
+            return y + '/' + m + '/' + d
+          }
+        }
+      })
+      // 局部自定义指令通过在组件内部使用directives属性创建
+      Vue.component('two', {
+        data () {
+          return {
+            time: new Date(),
+            color: 'red'
+          }
+        },
+        template: `
+                      <div>
+                        <p>{{time}}</p>
+                        <input type="text" v-myfocus v-mycolor="color">
+                      </div>
+        `,
+        directives: {
+          myfocus: {
+            inserted(el, binding) {
+              console.log(el);
+              console.log(binding);
+              el.focus()
+            }
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="firstName">
+      <input type="text" v-model="lastName">
+      <!-- 这样写不好，这样是模板逻辑变得厚重，不易维护 -->
+      <div>全名：{{firstName + lastName}}</div>
+
+      <h1>computed</h1>
+      <div>全名：{{fullName}}</div>
+    </div>
+    <script>
+      // 计算属性是根据data中已有的属性，计算得到一个新的属性
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          firstName: '',
+          lastName: ''
+        },
+        // 创建计算属性通过computed关键字，它是一个对象
+        // 计算属性是基于它们的依赖进行缓存的
+        computed: {
+          // 这里fullName就是一个计算属性，它是一个函数，但这个函数可以当成属性来使用
+          fullName () {
+            return this.firstName + this.lastName
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

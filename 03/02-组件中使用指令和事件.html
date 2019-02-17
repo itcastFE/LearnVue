@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+
+      <index></index>
+    </div>
+    <script>
+      // 创建一个index组件
+      // 构造 Vue 实例时传入的各种选项大多数都可以在组件里使用，但注意data必须是一个函数
+      Vue.component('index', {
+        template: '<div>{{msg}}<button @click="changeMsg">点击</button></div>',
+        // 错误写法
+        // data: {
+        //   msg: 'hello world'
+        // }
+        // data必须是一个函数
+        data() {
+          return {
+            msg: 'hello world'
+          }
+        },
+        methods: {
+          changeMsg() {
+            this.msg = 'itcast'
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

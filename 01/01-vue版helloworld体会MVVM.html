@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 1. 引入vue文件 -->
+  <script src="./vue2.js"></script>
+</head>
+<body>
+  <!-- {{msg}} -->
+  <div id="app">
+    <!-- 5. 使用{{}}展示文本 -->
+    <p>{{msg}}</p>
+  </div>
+  <script>
+    // 2. 创建一个vue实例，这个实例能够监管html代码
+    var vm = new Vue({
+      // 3. 通过el属性指定vue实例的监管范围，它的值是一个id
+      el: '#app',
+      // 4. 通过data属性保存数据
+      data: {
+        msg: 'hello world'
+      }
+    })
+  </script>
+</body>
+</html>

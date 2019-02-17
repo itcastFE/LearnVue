@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+    <!-- 1. 引入路由文件 -->
+    <script src="./vue-router.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <!-- 
+          vue路由中通过router-link去做跳转，它有一个to属性，to属性的值必须和path中的路径对应
+          router-link将来会被渲染成为a标签，它的to属性会被渲染成a标签的href属性，但它的值前对面会加一个#，变为锚点
+        -->
+        <li><router-link to="/index">首页</router-link></li>
+        <li><router-link to="/product_type/11">蔬菜</router-link></li>
+        <li><router-link to="/product_type/22">水果</router-link></li>
+        <li><router-link to="/product_type/33">肉类</router-link></li>
+      </ul>
+      <!-- 6. 通过router-view挖坑，路径匹配到的组件都会渲染到这个坑里面来 -->
+      <router-view></router-view>
+    </div>
+    <script>
+      // 2. 准备路由需要的组件
+      var index = Vue.component('index', {
+        template: '<div>首页</div>'
+      })
+      var cookBook = Vue.component('cookBook', {
+        template: '<div>我这里有很多食谱，欢迎查看</div>'
+      })
+      var productType = Vue.component('productType', {
+        data () {
+          return {
+            allProduct: ''
+          }
+        },
+        // 在html中获取路由参数 通过$route.params.参数名
+        template: `
+                    <div>
+                    这里显示商品编号{{$route.params.id}}
+                    <p>{{allProduct}}<button @click="jumpTo">查看食谱</button></p>
+                    <router-view></router-view>
+                    </div>
+        `,
+        methods: {
+          jumpTo () {
+            // 通过$router来跳转
+            this.$router.push({name: 'cookBook'})
+            console.log(this.$router);
+          }
+        },
+        mounted () {
+          // 在js中获取路由参数 通过this.$route.params.参数名
+          console.log(this.$route.params.id);
+          console.log(this.$route);
+        },
+        watch: {
+          // to 表示你将要去的路由对象， from表示你从哪个路由对象来
+          '$route' (to, from) {
+            console.log(to);
+            console.log(from);
+            if (to.params.id === '11') {
+              this.allProduct = '葫芦卜/白菜/香菇……'
+            } else if (to.params.id === '22') {
+              this.allProduct = '西瓜/香蕉/苹果……'
+            } else {
+              this.allProduct = '猪肉/牛肉/羊肉……'
+            }
+          }
+        }
+      })
+      // 3. 创建路由对象，在这个对象里面去配置路由规则
+      var router = new VueRouter({
+        // 4. 通过routes属性配置路由规则，它是一个数组，数组中放的是对象，每个对象对应一条规则，并且每个对象里面都包含有name(表示路由规则的名称)/path(表示路径)/component(表示路径对应的组件)
+        routes: [
+          {name: 'index', path: '/index', component: index},
+          // 路由加参数方法 :参数名
+          // 嵌套路由的创建通过children属性，它是一个数组，数组中放的是对象，每个对象对应一条规则
+          {name: 'productType', path: '/product_type/:id', component: productType,
+            children: [
+              // 嵌套中的path不能加/
+              {name: 'cookBook', path: 'cook_book', component: cookBook}
+            ]
+          },
+          // 路由重定向
+          // {name: 'default', path: '*', redirect: '/index'}
+          {name: 'default', path: '*', redirect: {name: 'index'}}
+        ]
+      })
+      var vm = new Vue({
+        el: '#app',
+        // 5. 在vue实例中注入路由，这样整个应用程序都会拥有路由了
+        // router: router,
+        router,
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <father></father>
+
+    </div>
+    <script>
+      // 创建一个fahter组件
+      Vue.component('father', {
+        // 2. 在使用子组件的地方，通过v-bind指令给子组件中的props赋值
+        template: '<div><p>我是父组件，我给我儿子起名叫{{mySonName}}</p><son :myName="mySonName"></son></div>',
+        data () {
+          return {
+            mySonName: '小光'
+          }
+        },
+        // 通过components属性创建子组件
+        components: {
+          // 创建一个son组件
+          son: {
+            // 1. 声明props，它的作用是：用来接收从父组件传递过来的值
+            // props可以跟一个数组，数组里面的值是一个一个的字符串，这个字符串可以当成属性来使用
+            props: ['myName'],
+            template: '<p>我是子组件，我爸爸给我取名叫{{myName}}</p>'
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

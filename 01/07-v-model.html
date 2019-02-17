@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-model指令用来双向数据绑定：就是model和view中的值进行同步变化 -->
+      <!-- v-model只能在input/textarea/selet -->
+      <input type="text" v-model="name">
+
+      <!-- <div v-model="name"></div> 这是错误用法-->
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          name: 'jack'
+        }
+      })
+    </script>
+  </body>
+</html>

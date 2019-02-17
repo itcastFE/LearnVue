@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./vue2.js"></script>
+  <style>
+    #app {
+      width: 600px;
+      margin: 10px auto;
+    }
+
+    .tb {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .tb th {
+      background-color: #0094ff;
+      color: white;
+    }
+
+    .tb td,
+    .tb th {
+      padding: 5px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .add {
+      padding: 5px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="add">
+      编号:
+      <!-- ref属性表示对dom的引用，它的值可以随便取，但是不能重复 -->
+      <input type="text" v-model="newId" id="inputId" ref="inputRefId"> 品牌名称:
+      <input type="text" v-model="newName">
+      <input type="button" value="添加" @click="addData">
+    </div>
+
+    <div class="add">
+      品牌名称:
+      <input type="text" placeholder="请输入搜索条件">
+    </div>
+
+    <div>
+      <table class="tb">
+        <tr>
+          <th>编号</th>
+          <th>品牌名称</th>
+          <th>创立时间</th>
+          <th>操作</th>
+        </tr>
+        <tr v-for="(item, index) in list" :key="index">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.ctime}}</td>
+          <td>
+            <!-- 将index作为参数传入 -->
+            <a href="#" @click="deleteData(index)">删除</a>
+          </td>
+        </tr>
+        <tr v-if="list.length === 0">
+          <td colspan="4">没有品牌数据</td>
+        </tr>
+        <!-- 动态生成内容tr -->
+      </table>
+    </div>
+  </div>
+</body>
+
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      newId: '',
+      newName: '',
+      list: [
+        {id: 1, name: 'CC', ctime: new Date()},
+        {id: 2, name: 'LV', ctime: new Date()},
+        {id: 3, name: 'AA', ctime: new Date()},
+        ]
+    },
+    // mounted钩子函数很特殊，它表示页面一加载进来就执行函数里面的内容（和window.onload类似）
+    // 注意：mounted钩子函数的名字不能不能随便取，而且它不能写在methods属性。
+    mounted () {
+      console.log('1111');
+      // document.getElementById('inputId').focus()
+      // 通过this.$refs.ref的值    来获取dom
+      // console.log(this.$refs);
+      this.$refs.inputRefId.focus()
+    },
+    methods: {
+      deleteData (idx) {
+        this.list.splice(idx, 1)
+      },
+      addData () {
+        this.list.push({id: this.newId, name: this.newName, ctime: new Date()})
+      }
+    }
+  })
+</script>
+
+</html>

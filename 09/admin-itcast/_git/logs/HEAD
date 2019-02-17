@@ -1,0 +1,71 @@
+0000000000000000000000000000000000000000 34dcb239a4bbf0a2b3cbe69b66a4eb18c6237083 Alan <alan@hotmail.com> 1521538640 +0800	commit (initial): 'init'
+34dcb239a4bbf0a2b3cbe69b66a4eb18c6237083 95cdbb2414f71e5f9a37306dbaf018ad10f246fc Alan <alan@hotmail.com> 1521554048 +0800	commit: '登录页面完成'
+95cdbb2414f71e5f9a37306dbaf018ad10f246fc 1128868a6a558939d106d8723aa5cd7738381385 Alan <alan@hotmail.com> 1521620080 +0800	commit: '登录功能简单完成'
+1128868a6a558939d106d8723aa5cd7738381385 d24272427861dfe0e56ea42d8a5f520961b32446 Alan <alan@hotmail.com> 1521640462 +0800	commit: 'axios拦截器'
+d24272427861dfe0e56ea42d8a5f520961b32446 4fca0c766554e9e663576dc80314c8df1915a664 Alan <alan@hotmail.com> 1521641418 +0800	commit: 'update'
+4fca0c766554e9e663576dc80314c8df1915a664 66736a19a13928416ecc628d3a50080d08257c1d Alan <alan@hotmail.com> 1521642236 +0800	commit: 'axios拦截器'
+66736a19a13928416ecc628d3a50080d08257c1d 07e87d2b2aa0ff25f75951953cd4668d6a7ed6ab Alan <alan@hotmail.com> 1521646855 +0800	commit: '设置路由全局守卫'
+07e87d2b2aa0ff25f75951953cd4668d6a7ed6ab 66586c5fee76f1363ce21a142d65127f89ffb9db Alan <alan@hotmail.com> 1521686585 +0800	commit: '首页整体布局'
+66586c5fee76f1363ce21a142d65127f89ffb9db e6bcbbc0539c84d755182e26885a80b27959e9d7 Alan <alan@hotmail.com> 1521689083 +0800	commit: '首页-侧边栏'
+e6bcbbc0539c84d755182e26885a80b27959e9d7 2bbfe779842a8fcf84c95417b85ec81f2531d98a Alan <alan@hotmail.com> 1521689181 +0800	commit: 'update'
+2bbfe779842a8fcf84c95417b85ec81f2531d98a 66586c5fee76f1363ce21a142d65127f89ffb9db Alan <alan@hotmail.com> 1521689224 +0800	reset: moving to 66586c5
+66586c5fee76f1363ce21a142d65127f89ffb9db 76090054746870b21d06e5a4cc5e8a4130a3db5d Alan <alan@hotmail.com> 1521690199 +0800	commit: '首页-侧边栏'
+76090054746870b21d06e5a4cc5e8a4130a3db5d 52631a9b11afb0143ec506142af4300d6d784593 Alan <alan@hotmail.com> 1521700170 +0800	commit: 'update'
+52631a9b11afb0143ec506142af4300d6d784593 43a7e57e916680a3b14ea722cd358a153720f12a Alan <alan@hotmail.com> 1521702352 +0800	commit: '头部以及内容部分内容完善'
+43a7e57e916680a3b14ea722cd358a153720f12a 52631a9b11afb0143ec506142af4300d6d784593 Alan <alan@hotmail.com> 1521702829 +0800	reset: moving to 52631a9
+52631a9b11afb0143ec506142af4300d6d784593 46d1db16bec140f91df6cf59f8c070243bf30bcf Alan <alan@hotmail.com> 1521704365 +0800	commit: 头部部分功能及中间内容部分跳转
+46d1db16bec140f91df6cf59f8c070243bf30bcf f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 Alan <alan@hotmail.com> 1521793661 +0800	commit: '头部功能完善'
+f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 Alan <alan@hotmail.com> 1521794062 +0800	checkout: moving from master to user
+f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 126b84528efe99fb3a9435fb936d55297e50cf51 Alan <alan@hotmail.com> 1521795009 +0800	commit: 用户列表页面
+126b84528efe99fb3a9435fb936d55297e50cf51 e0353b59e7b3f7dc1f00f95d6c98e477188df9f9 Alan <alan@hotmail.com> 1521971510 +0800	commit: '用户列表-表格数据渲染'
+e0353b59e7b3f7dc1f00f95d6c98e477188df9f9 7242769d4c2153738cd3e17225eac3d0c0387df2 Alan <alan@hotmail.com> 1521975436 +0800	commit: '用户列表-搜索功能'
+7242769d4c2153738cd3e17225eac3d0c0387df2 e0353b59e7b3f7dc1f00f95d6c98e477188df9f9 Alan <alan@hotmail.com> 1521976019 +0800	reset: moving to e0353b5
+e0353b59e7b3f7dc1f00f95d6c98e477188df9f9 07de7a93ded4cc3c52d455f74a4a67bd4b282434 Alan <alan@hotmail.com> 1521977342 +0800	commit: '用户列表-搜索功能'
+07de7a93ded4cc3c52d455f74a4a67bd4b282434 710d4a60e3a121a11a3babde38cc258bd6b42920 Alan <alan@hotmail.com> 1522030064 +0800	commit: '用户列表-分页功能'
+710d4a60e3a121a11a3babde38cc258bd6b42920 46e418faa25e3e544913df26abc0f62beee624e3 Alan <alan@hotmail.com> 1522044141 +0800	commit: 'update'
+46e418faa25e3e544913df26abc0f62beee624e3 4e892170f9319f56ad93bf1b0e4da1b3d7dd202b Alan <alan@hotmail.com> 1522045729 +0800	commit: update
+4e892170f9319f56ad93bf1b0e4da1b3d7dd202b 6f566bb7c7df4c48c3804af3f0da6aa8357acae9 Alan <alan@hotmail.com> 1522046846 +0800	commit: '用户列表-添加用户'
+6f566bb7c7df4c48c3804af3f0da6aa8357acae9 f73e10a1a4438c69575ec822de3c7e8d92a947f1 Alan <alan@hotmail.com> 1522052435 +0800	commit: '用户列表-编辑用户'
+f73e10a1a4438c69575ec822de3c7e8d92a947f1 8534697985028e66200ea0f303b0e6910cd0b6da Alan <alan@hotmail.com> 1522053235 +0800	commit: '用户列表-删除用户'
+8534697985028e66200ea0f303b0e6910cd0b6da b303b11d562a9302323506a837329f65664d5949 Alan <alan@hotmail.com> 1522061427 +0800	commit: 用户列表-分配角色
+b303b11d562a9302323506a837329f65664d5949 62b15e85a552d9d0ac05c6cb66ea1608a8f08e3c Alan <alan@hotmail.com> 1522061914 +0800	commit: '用户列表-数据加载动画'
+62b15e85a552d9d0ac05c6cb66ea1608a8f08e3c b303b11d562a9302323506a837329f65664d5949 Alan <alan@hotmail.com> 1522115437 +0800	reset: moving to b303b11
+b303b11d562a9302323506a837329f65664d5949 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522117484 +0800	commit: '用户列表完善'
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 Alan <alan@hotmail.com> 1522117495 +0800	checkout: moving from user to master
+f8e496ce0578b6e2bde5a2a816ac3ebe2fa7fda5 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522117501 +0800	merge user: Fast-forward
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522121102 +0800	checkout: moving from master to role
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522122218 +0800	checkout: moving from role to master
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522133629 +0800	checkout: moving from master to rights
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c 5227b12e1493be67df2e7f92d3ae4958be90d0a2 Alan <alan@hotmail.com> 1522134534 +0800	commit: '权限管理路由'
+5227b12e1493be67df2e7f92d3ae4958be90d0a2 064bfaa55ac9c6b4458e7a8c157332345c4c1b08 Alan <alan@hotmail.com> 1522136225 +0800	commit: '权限管理-权限列表'
+064bfaa55ac9c6b4458e7a8c157332345c4c1b08 8fc09ada59ac9d0f96bb9a6708f01bfeb1f9c2e3 Alan <alan@hotmail.com> 1522141253 +0800	commit: '权限管理-权限列表-表格数据获取展示'
+8fc09ada59ac9d0f96bb9a6708f01bfeb1f9c2e3 9a1eaefe67e20304ac3016c958de9323e67cf803 Alan <alan@hotmail.com> 1522141328 +0800	commit (amend): '权限管理-权限列表-表格数据获取展示'
+9a1eaefe67e20304ac3016c958de9323e67cf803 1095d3bbd22aa0cf7ad51a3e224d309fddbe58d5 Alan <alan@hotmail.com> 1522143096 +0800	commit: 'update'
+1095d3bbd22aa0cf7ad51a3e224d309fddbe58d5 489087340790a3e7dd383c8d01ce38f4b8496cf5 Alan <alan@hotmail.com> 1522146410 +0800	commit: '权限管理-权限列表-表格展开行数据渲染'
+489087340790a3e7dd383c8d01ce38f4b8496cf5 897b4e36649b2c8f8df8145f7df8ab87641e2634 Alan <alan@hotmail.com> 1522228795 +0800	commit: '权限管理-权限列表-展开行中权限删除功能'
+897b4e36649b2c8f8df8145f7df8ab87641e2634 dbdf9834dfec4a30c2b5edce8959ecee6d30290c Alan <alan@hotmail.com> 1522230666 +0800	commit: '权限管理-权限列表-授权角色树数据展示'
+dbdf9834dfec4a30c2b5edce8959ecee6d30290c 48cfbfb980b4cd57fd7168e827c1831cd305d6e0 Alan <alan@hotmail.com> 1522302367 +0800	commit: '权限管理-权限列表-授权角色树默认选中'
+48cfbfb980b4cd57fd7168e827c1831cd305d6e0 6214f370532025624d37e51ae4ce70d46dc4c7d8 Alan <alan@hotmail.com> 1522405000 +0800	commit: 权限管理-权限列表-授权提交
+6214f370532025624d37e51ae4ce70d46dc4c7d8 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522574495 +0800	commit: '权限管理-菜单数据动态获取'
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 33e0d25a0fc4e18efebfd239ea85bd18da0dd01c Alan <alan@hotmail.com> 1522632375 +0800	checkout: moving from rights to master
+33e0d25a0fc4e18efebfd239ea85bd18da0dd01c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522632385 +0800	merge rights: Fast-forward
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522632427 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522633371 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522633594 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522633959 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522634297 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522634361 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522634425 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522634657 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522634741 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522635527 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522635714 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522635881 +0800	checkout: moving from goods to master
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c 5a48ec32b613baeabbb6c7920684d3b2d8acf41c Alan <alan@hotmail.com> 1522636033 +0800	checkout: moving from master to goods
+5a48ec32b613baeabbb6c7920684d3b2d8acf41c b26a8a4e24be10f92b61303e0d2d74082658f969 Alan <alan@hotmail.com> 1522637014 +0800	commit: '商品管理-商品分类-页面及TreeGrid组件使用'
+b26a8a4e24be10f92b61303e0d2d74082658f969 c7276100a2ffa475b061086bc4965f80297cb14f Alan <alan@hotmail.com> 1522638080 +0800	commit: 'reademe文件修改'
+c7276100a2ffa475b061086bc4965f80297cb14f 184560b0edf122da95b91eecfb1b4cb947310502 Alan <alan@hotmail.com> 1522648745 +0800	commit: '商品管理-商品分类-TreeGrid组件数据渲染及分页'
+184560b0edf122da95b91eecfb1b4cb947310502 3f161324911ee8571373c053d3e42b5ed38ae47b Alan <alan@hotmail.com> 1522649892 +0800	commit: '商品管理-商品分类-级联选择器数据展示'
+3f161324911ee8571373c053d3e42b5ed38ae47b 6f49e2f99a2aca843f4337c93cb3ca8ce691a84d Alan <alan@hotmail.com> 1522656756 +0800	commit: '商品管理-商品分类-添加商品分类提交'
+6f49e2f99a2aca843f4337c93cb3ca8ce691a84d dd2c781181be18c68946ac121aed841fe5cdc319 Alan <alan@hotmail.com> 1522662832 +0800	commit: '商品管理-商品列表-添加商品步骤条组件和tab组件'
+dd2c781181be18c68946ac121aed841fe5cdc319 b597596b8113da31b0d0e92265f97f26cfc5cc73 Alan <alan@hotmail.com> 1522666228 +0800	commit: '商品管理-商品列表-添加商品图片上传'

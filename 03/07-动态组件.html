@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li @click="currentCom='index'"><a href="#">首页</a></li>
+        <li @click="currentCom='productType'"><a href="#">蔬菜</a></li>
+        <li @click="currentCom='productType'"><a href="#">水果</a></li>
+        <li @click="currentCom='productType'"><a href="#">肉类</a></li>
+      </ul>
+      <!-- 利用component标签创建动态组件，它的is属性指向谁，就显示哪个组件 -->
+      <component :is="currentCom"></component>
+    </div>
+    <script>
+      // 首页组件
+      Vue.component('index', {
+        template: '<div>首页</div>'
+      })
+      Vue.component('productType', {
+        template: '<div>这里显示商品编号</div>'
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          currentCom: ''
+        }
+      })
+    </script>
+  </body>
+</html>

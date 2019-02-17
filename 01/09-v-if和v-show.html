@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- v-if和v-show指令可以用来控制元素的显示和隐藏 v-if="布尔值" v-show="布尔值" 布尔值为true元素显示，false隐藏 -->
+      <!-- 区别：
+          v-if通过控制dom来控制元素的显示和隐藏
+          v-show通过控制样式display:none来控制元素的显示与隐藏
+          使用场景区别
+          1. 涉及到大量dom操作的时候，我们需要使用v-show
+          2. 涉及到异步数据渲染的时候就要使用v-if
+       -->
+      <h1>v-if</h1>
+      <p v-if="isVisible">aaaa</p>
+      <h1>v-show</h1>
+      <p v-show="isVisible">bbbb</p>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          isVisible: false
+        }
+      })
+    </script>
+  </body>
+</html>

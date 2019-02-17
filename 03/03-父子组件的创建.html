@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <father></father>
+
+    </div>
+    <script>
+      // 创建一个fahter组件
+      Vue.component('father', {
+        template: '<div><p>我是父组件</p><son></son></div>',
+        // 通过components属性创建子组件
+        components: {
+          // 创建一个son组件
+          son: {
+            template: '<p>我是子组件</p>'
+          }
+        }
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+
+        }
+      })
+    </script>
+  </body>
+</html>

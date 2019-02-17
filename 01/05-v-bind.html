@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+    <style>
+      .red-font {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      {{name}}
+
+      <!-- v-bind阔以用来动态绑定属性 使用方式 v-bind:属性名=“data里面的属性” -->
+      <img v-bind:src="avatar" alt="">
+
+      <!-- v-bind的简写方式  :属性名=“data里面的属性” 推荐写法-->
+      <img :src="avatar" alt="">
+
+      <a :href="'del.php?id='+id">删除</a>
+
+      <!-- v-bind阔以想绑什么属性，就绑什么属性，这种绑定在后面组件开发的时候很常用 -->
+      <p :name="name">测试属性绑定</p>
+
+      <!-- v-bind动态绑定样式  :class="{'类名':布尔值}" -->
+      <p :class="{'red-font': true}">红色字体</p>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          name: 'jack',
+          avatar: './avatar.jpg',
+          id: 11
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{name}}</h1>
+      <!-- 
+        v-on指令用来监听dom事件
+        使用方法：
+          1. 在标签的属性位置写上v-on:任意的事件类型="执行的函数"
+          2. 简写：@任意的事件类型="执行的函数" （推荐）
+          3. 通过执行函数添加参数
+          4. 通过执行函数中添加$event参数传递事件对象，注意只能是$event,并且不能加引号
+          5. 事件修饰符可以给事件添加特殊功能 .stop .prevent
+          6. 可以给和按键相关的事件添加按键修饰符 常用的有 .enter
+       -->
+      <button v-on:click="changeMsg">点击改变</button>
+      <button @click="changeMsg">简写</button>
+      <button @click="changeMsgByArg('heima')">传参</button>
+      <button @click="getEvent($event)">事件对象</button>
+      <a href="http://www.baidu.com" @click.prevent="changeMsg">跳转</a>
+      <input v-on:keyup.13="submit">
+      <input v-on:keyup.enter="submit">
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          name: 'jack'
+        },
+        // 在methods属性中定义函数
+        methods: {
+          changeMsg() {
+            // 注意在methods中想要去获取data中的属性的话，需要加上this，this表示vue实例
+            this.name = 'itcast'
+          },
+          changeMsgByArg(arg) {
+            this.name = arg
+          },
+          getEvent(e) {
+            console.log(e);
+          },
+          submit () {
+            console.log('submit');
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

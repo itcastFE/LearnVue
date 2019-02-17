@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 1. 给闪烁的元素加上v-cloak指令 -->
+      <!-- 当vue实例结束编译之后（vue文件加载完成之后）， v-cloak会被删除-->
+      <p v-cloak>{{msg}}</p>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          msg: 'hello'
+        }
+      })
+    </script>
+  </body>
+</html>

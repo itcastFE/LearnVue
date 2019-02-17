@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+    <!-- 2. 定义类名 -->
+    <style>
+      /* 定义进入过渡的开始状态 */
+      .slide-enter, .slide-leave-to {
+        padding-left: 100px;
+      }
+      /* 定义过渡的状态 */
+      .slide-enter-active, .slide-leave-active {
+        transition: all 2s;
+      }
+      /* 定义进入过渡的结束状态 */
+      .slide-enter-to, .slide-leave {
+        padding-left: 0px;
+      }
+      /* .slide-leave {
+        padding-left: 0px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 1. 找到需要加过渡的元素，把它用transition标签包裹起来，然后给transition标签指定name属性，这个name属性会作为类名的前缀 -->
+      <transition name="slide">
+          <div v-if="isShow">itcast</div>
+      </transition>
+      <button @click="isShow=!isShow">点击</button>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          isShow: true
+        }
+      })
+    </script>
+  </body>
+</html>

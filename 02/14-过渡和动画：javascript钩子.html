@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./vue2.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 
+          v-on:before-enter="beforeEnter" 进入动画之前
+          v-on:enter="enter" 进入动画中
+          v-on:after-enter="afterEnter" 进入动画完成后
+
+          v-on:before-leave="beforeLeave"
+          v-on:leave="leave"
+          v-on:after-leave="afterLeave"
+       -->
+      <transition
+        v-on:before-enter="beforeEnter"
+        v-on:enter="enter"
+        v-on:after-enter="afterEnter"
+
+        v-on:before-leave="beforeLeave"
+        v-on:leave="leave"
+        v-on:after-leave="afterLeave"
+      >
+          <div v-if="isShow">itcast</div>
+      </transition>
+      <button @click="isShow=!isShow">点击</button>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          isShow: true
+        },
+        methods: {
+          beforeEnter (el) {
+            console.log('beforeEnter');
+            el.style.paddingLeft = '100px'
+          },
+          // 在动画结束完成时，一定要调用done函数，否则会出错
+          enter (el, done) {
+            console.log('enter');
+            // done()
+            var step = 1;
+            var interval = setInterval(() => {
+              el.style.paddingLeft = (100 - step) + 'px';
+              step++;
+              if (step===100) {
+                clearInterval(interval);
+                done();
+              }
+            },5)
+          },
+          afterEnter (el) {
+            console.log('afterEnter');
+          },
+          beforeLeave (el) {
+            console.log('beforeLeave');
+          },
+          // 在动画结束完成时，一定要调用done函数，否则会出错
+          leave (el, done) {
+            console.log('leave');
+            done()
+          },
+          afterLeave (el) {
+            console.log('afterLeave');
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
